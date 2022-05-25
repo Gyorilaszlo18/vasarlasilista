@@ -20,7 +20,7 @@ import java.util.List;
             DB.add(new Products(1, "tej", "Hajdú Tej", Genre.Spar));
             DB.add(new Products(2, "kenyér", "Alföldi Pékség", Genre.Lidl));
             DB.add(new Products(3, "cola", "Coca", Genre.Aldi));
-            DB.add(new Products(4, "alma", "Nyírségi Farm", Genre.Tesco));
+            DB.add(new Products(4, "alma", "Nyírség Farm", Genre.Tesco));
         }
 
         public VasarlasilistaServiceImpl(List<Products> movies) {

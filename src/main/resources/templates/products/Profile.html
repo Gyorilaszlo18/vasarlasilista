@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Dvd Katalógus</title>
+    <title>Terméklista</title>
 
     <link rel="stylesheet"
           th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
@@ -16,34 +16,32 @@
 <body>
 
 <div class="container">
-    <h3 class="pt-5">Saját filmek</h3>
+    <h3 class="pt-5">Kosaram</h3>
 
-    <a th:href="@{/movie}"
+    <a th:href="@{/products}"
        type="button"
        class="btn btn-info">Vissza</a>
 
     <table class="table table-striped pt-5">
-        <caption>Saját Lemez lista</caption>
+        <caption>Kosár</caption>
         <thread>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Cím</th>
-                <th scope="col">Kiadó</th>
-                <th scope="col">Kiadási Év</th>
-                <th scope="col">Műfaj</th>
+                <th scope="col">Termék</th>
+                <th scope="col">Termelő</th>
+                <th scope="col">Viszonteladó</th>
 
             </tr>
         </thread>
         <tbody>
-        <tr th:each="movie: ${movies}">
+        <tr th:each="products: ${products}">
             <th scope="row"
-                th:text="${movie.id}"></th>
-            <td th:text="${movie.title}"></td>
-            <td th:text="${movie.publisher}"></td>
-            <td th:text="${movie.year}"></td>
-            <td th:text="${movie.type}"></td>
+                th:text="${products.id}"></th>
+            <td th:text="${products.title}"></td>
+            <td th:text="${products.maker}"></td>
+            <td th:text="${products.genre}"></td>
             <td>
-                <a th:href="@{'/movie/' + ${movie.id} +  '/delete'}"
+                <a th:href="@{'/products/' + ${products.id} +  '/delete'}"
                    type="button"
                    class="btn btn-danger">Törlés</a>
             </td>
