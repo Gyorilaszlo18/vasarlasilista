@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class VasarlasilistaApplication {
+public class vasarlasilistaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VasarlasilistaApplication.class, args);
+		SpringApplication.run(vasarlasilistaApplication.class, args);
 	}
 
 }
