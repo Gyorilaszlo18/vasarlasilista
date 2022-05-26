@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Terméklista</title>
+
+  <link rel="stylesheet"
+        th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}"/>
+  <script th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+<body>
+
+<div class="container">
+  <h3 class="pt-5">Terméklista</h3>
+
+  <a th:href="@{/product/profile}"
+     type="button"
+     class="btn btn-info">Cikkek</a>
+  <table class="table table-striped pt-5">
+    <caption>Termék</caption>
+    <thread>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Termék</th>
+        <th scope="col">Termelő</th>
+        <th scope="col">Viszonteladó</th>
+
+      </tr>
+    </thread>
+    <tbody>
+    <tr th:each="products: ${products}">
+      <th scope="row"
+          th:text="${products.id}" ></th>
+      <td th:text="${products.title}"></td>
+      <td th:text="${products.maker}"></td>
+      <td th:text="${products.genre}"></td>
+      <td>
+        <a th:href="@{'/products/' + ${products.id} +  '/put'}"
+           type="button"
+           class="btn btn-success">Hozzáad a bevásárlólistához</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
